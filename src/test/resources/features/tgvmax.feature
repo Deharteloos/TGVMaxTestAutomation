@@ -4,9 +4,9 @@ Feature: TGVmax bugs
   @severity=minor
   @bug_1369
   Scenario: Google plus page unavailable
-    Given Go to page "https://www.tgvmax.fr/VSC/fr-FR"
+    Given Go to home page
     When  Scroll down to footer
-    Then The Google+ icon is no longer visible
+    Then The Google Plus icon is no longer visible
 
 
   @severity=minor
@@ -22,7 +22,7 @@ Feature: TGVmax bugs
   @severity=critical
   @bug_1263 
   Scenario: Redirection to an inaccessible page
-    Given Go to page "https://www.tgvmax.fr/VSC/fr-FR"
-    When Click on  "Tout ce qu’il faut savoir sur TGVmax" and click on "Y a-t-il des principes propres à TGVmax que je dois connaître?"
+    Given Go to home page
+    When Click on "Tout ce qu’il faut savoir sur TGVmax" and click on question "Y a-t-il des principes propres à TGVmax que je dois connaître?"
     And Click on "Espace Max"
     Then The page is inaccessible with "http://localhost/<id_agence>/fr-FR/factures"

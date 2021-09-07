@@ -2,6 +2,6 @@ package enums;
 
 public enum Context {
 
-    URL;
+    MY_SPACE_URL;
 
 }
